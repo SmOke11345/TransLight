@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.521vw;
+  font-weight: 300;
+}
+
+body {
+  background-color: #E5E5E5;
+  color: #ffffff;
+}
+
+div, p, a, button, input, form, span, ul, li {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #000000;
+  font-size: 3rem;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.catalog__selector-name, .header .container .nav__links, .header .container .nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: normal;
+}
+
+.container {
+  width: 114rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: 96rem;
+  }
+}
+.wrapper__background {
+  background: url(/assets/img/background--hero.png) no-repeat;
+  min-height: 80rem;
+  background-size: contain;
+}
+
+.header .container {
+  width: 100%;
+}
+.header .container .nav {
+  align-items: center;
+  background-color: rgba(0, 91, 193, 0.6);
+  padding: 1.5rem 4rem;
+}
+.header .container .nav .logo {
+  width: 14rem;
+}
+.header .container .nav__links {
+  width: 45.3rem;
+  margin-right: 64rem;
+}
+.header .container .nav__links p {
+  font-weight: 600;
+}
+
+.hero .container {
+  width: 61rem;
+}
+.hero__background {
+  width: 44rem;
+  height: 70.3rem;
+  background-color: rgba(0, 91, 193, 0.6);
+  position: absolute;
+  top: 9rem;
+  left: 45.5rem;
+}
+.hero__title {
+  margin-top: 20.2rem;
+}
+.hero__title h1 {
+  font-size: 4.8rem;
+  text-transform: none;
+  color: #FFFFFF;
+}
+.hero__subtitle {
+  width: 40rem;
+}
+.hero__subtitle p {
+  font-size: 1.6rem;
+}
+.hero__btn {
+  width: 16rem;
+  display: block;
+}
+.hero__btn p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.9rem 3.6rem;
+  border: 0.2rem solid #FFFFFF;
+}
+
+.hero__subtitle, .hero__btn {
+  margin-top: 3rem;
+}
+
+.hero__subtitle, .hero__btn, .hero__title {
+  position: relative;
+}
+
+.wrapper-title {
+  padding: 15rem 0 7rem;
+  width: 36rem;
+  text-align: end;
+  position: relative;
+}
+.wrapper-title h2 {
+  line-height: 4.4em;
+  letter-spacing: 0.1em;
+  background: url(/assets/img/heading--title.png) no-repeat left;
+  background-size: 10rem;
+}
+
+.owl-item {
+  position: relative;
+  width: 54rem;
+}
+.owl-item.active {
+  margin-right: 3rem;
+}
+
+.owl-prev, .owl-next {
+  width: 5.5rem;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+  margin: 0.1rem;
+}
+
+.owl-carousel .owl-stage-outer {
+  max-height: 42rem;
+}
+
+.owl-theme .owl-nav {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 19rem;
+  right: 0;
+  margin: 0;
+}
+
+.carousel-name {
+  position: absolute;
+  width: 25rem;
+  background-color: #FFFFFF;
+  padding: 2rem 2.5rem;
+  top: 25.5rem;
+  right: 2.9rem;
+}
+.carousel-name .carousel__title h4 {
+  font-size: 1.8rem;
+}
+.carousel-name .carousel__subtitle p {
+  color: #000000;
+  margin-top: 1rem;
+}
+
+.catalog .wrapper-title {
+  width: 44rem;
+}
+.catalog__selector-name {
+  width: 20rem;
+  margin: auto;
+}
+.catalog__name h3 {
+  font-size: 2.4rem;
+  transition: ease-in-out 0.1s;
+}
+.catalog__name h3:hover {
+  color: #005BC1;
+  border-bottom: 0.2rem solid #005BC1;
+}
+.catalog__production {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 5rem;
+}
+.catalog__item {
+  position: relative;
+}
+.catalog__title-item {
+  position: absolute;
+  display: flex;
+  background-color: #005BC1;
+  width: 26.5rem;
+  height: 8.6rem;
+  top: 20rem;
+  right: 0;
+}
+.catalog__title {
+  padding: 1.7rem 3.5rem;
+  text-align: start;
+  display: flex;
+  align-items: center;
+}
+.catalog__title h4 {
+  color: #FFFFFF;
+  font-size: 1.8rem;
+}
+
+/*# sourceMappingURL=style.css.map */

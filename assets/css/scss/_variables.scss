@@ -1,0 +1,9 @@
+$base-color: #005BC1;
+$first-screen-color: rgba(0, 91, 193, 0.6);
+$font-p: 1.4rem;
+$font-h: 3rem;
+
+%wrapper {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,204 @@
+@import './_normalize.scss';
+@import './_variables.scss';
+
+p {
+    font-size: $font-p;
+    line-height: normal;
+}
+
+.container {
+    width: 114rem;
+    margin: 0 auto;
+}
+@media screen and (max-width: 992px) {
+    .container {
+        width: 96rem;
+    }
+}
+
+// wrapper / header 
+
+.wrapper__background {
+    background: url(/assets/img/background--hero.png) no-repeat;
+    min-height: 80rem;
+    background-size: contain;
+}
+
+.header {
+    .container {
+        width: 100%;
+        .nav {
+            @extend %wrapper;
+            align-items: center;
+            background-color: $first-screen-color;
+            padding: 1.5rem 4rem;
+            .logo {
+                width: 14rem;
+            }
+            &__links {
+                @extend %wrapper;
+                width: 45.3rem;
+                margin-right: 64rem;
+                p {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    .container {
+        width: 61rem;
+    }
+    &__background {
+        width: 44rem;
+        height: 70.3rem;
+        background-color: $first-screen-color;
+        position: absolute;
+        top: 9rem;
+        left: 45.5rem;
+    }
+    &__title  {
+        margin-top: 20.2rem;
+        h1 {
+            font-size: calc($font-h + 1.8rem);
+            text-transform: none;
+            color: #FFFFFF;
+        }
+    }
+    &__subtitle {
+        width: 40rem;
+        p {
+            font-size: calc($font-p + .2rem);
+        }
+    }
+    &__btn {
+        width: 16rem;
+        display: block;
+        p {
+            font-size: calc($font-p + .2rem);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            padding: .9rem 3.6rem;
+            border: .2rem solid #FFFFFF;
+        }
+    }
+}
+.hero__subtitle , .hero__btn {
+    margin-top: 3rem;
+} 
+.hero__subtitle , .hero__btn , .hero__title {
+    position: relative;
+}
+
+.wrapper-title {
+    padding: 15rem 0 7rem;
+    width: 36rem;
+    text-align: end;
+    position: relative;
+    h2 {
+        line-height: 4.4em;
+        letter-spacing: .1em;
+        background: url(/assets/img/heading--title.png) no-repeat left ;
+        background-size: 10rem;
+    }
+}
+
+// our-projects
+.owl-item {
+    position: relative;
+    width: 54rem;
+    &.active {
+        margin-right: 3rem;
+    }
+}
+
+.owl-prev , .owl-next {
+    width: 5.5rem;
+}
+.owl-theme .owl-nav [class*='owl-'] {
+    margin: .1rem;
+}
+.owl-carousel .owl-stage-outer {
+    max-height: 42rem;
+}
+
+.owl-theme .owl-nav {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 19rem;
+    right: 0;
+    margin: 0;
+}
+
+.carousel-name {
+    position: absolute;
+    width: 25rem;
+    background-color: #FFFFFF;
+    padding: 2rem 2.5rem;
+    top: 25.5rem;
+    right: 2.9rem;
+    .carousel__title h4 {
+        font-size: calc($font-h - 1.2rem);
+    }
+    .carousel__subtitle p {
+        color: #000000;
+        margin-top: 1rem;
+    }
+}
+
+// catalog
+
+.catalog {
+    .wrapper-title {
+        width: 44rem;
+    }
+    &__selector-name {
+        @extend %wrapper;
+        width: 20rem;
+        margin: auto;
+    }
+    &__name {
+        h3 {
+            font-size: calc($font-h - 0.6rem);
+            transition: ease-in-out .1s;
+            &:hover {
+                color: $base-color;
+                border-bottom: .2rem solid $base-color;
+            }
+        }
+        
+    }
+
+    &__production {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        margin-top: 5rem;
+    }
+    &__item {
+        position: relative;
+    }
+    &__title-item {
+        position: absolute;
+        display: flex;
+        background-color: $base-color;
+        width: 26.5rem;
+        height: 8.6rem;
+        top: 20rem;
+        right: 0;
+    }
+    &__title {
+        padding: 1.7rem 3.5rem;
+        text-align: start;
+        display: flex;
+        align-items: center;
+        h4 {
+            color: #FFFFFF;
+            font-size: calc($font-h - 1.2rem)
+        }
+    }
+}

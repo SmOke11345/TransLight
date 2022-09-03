@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.521vw; // при вычисление в rem, 1 rem = 10px на ширине экрана 1920px
+    font-weight: 300;
+}
+
+
+body {
+    background-color: #E5E5E5;
+    color: #ffffff;
+}
+
+div, p, a, button, input, form, span, ul, li  {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 3rem;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}

@@ -4,22 +4,23 @@
 p {
     font-size: $font-p;
     line-height: normal;
+    color: #343434;
+}
+
+li::marker {
+    color: #343434;
 }
 
 .container {
     width: 114rem;
     margin: 0 auto;
 }
-@media screen and (max-width: 992px) {
-    .container {
-        width: 96rem;
-    }
-}
+
 
 // wrapper / header 
 
 .wrapper__background {
-    background: url(./assets/img/background--hero.png) no-repeat;
+    background: url(../img/background--hero.png) no-repeat;
     min-height: 80rem;
     background-size: contain;
 }
@@ -41,6 +42,7 @@ p {
                 margin-right: 64rem;
                 p {
                     font-weight: 600;
+                    color: #ffffff;
                 }
             }
         }
@@ -70,6 +72,7 @@ p {
     &__subtitle {
         width: 40rem;
         p {
+            color: #ffffff;
             font-size: calc($font-p + .2rem);
         }
     }
@@ -79,6 +82,7 @@ p {
         p {
             font-size: calc($font-p + .2rem);
             font-weight: 600;
+            color: #ffffff;
             text-transform: uppercase;
             letter-spacing: .1em;
             padding: .9rem 3.6rem;
@@ -94,61 +98,57 @@ p {
 }
 
 .wrapper-title {
-    padding: 15rem 0 7rem;
+    padding: 15rem 0 2rem;
     width: 36rem;
     text-align: end;
     position: relative;
     h2 {
         line-height: 4.4em;
         letter-spacing: .1em;
-        background: url(/assets/img/heading--title.png) no-repeat left ;
+        background: url(../img/heading--title.png) no-repeat left ;
         background-size: 10rem;
     }
 }
 
 // our-projects
-.owl-item {
-    position: relative;
-    width: 54rem;
-    &.active {
-        margin-right: 3rem;
+.our__projects {
+    .owl-item {
+        position: relative;
+        width: 54rem;
+        &.active {
+            margin-right: 3rem;
+        }
+    }
+    
+    .owl-carousel .owl-stage-outer {
+        max-height: 42rem;
+    }
+    
+    .owl-theme .owl-nav {
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 19rem;
+        right: 0;
+        margin: 0;
+    }
+    
+    .carousel-name {
+        position: absolute;
+        width: 25rem;
+        background-color: #FFFFFF;
+        padding: 2rem 2.5rem;
+        top: 25.5rem;
+        right: 2.9rem;
     }
 }
-
 .owl-prev , .owl-next {
     width: 5.5rem;
 }
 .owl-theme .owl-nav [class*='owl-'] {
     margin: .1rem;
 }
-.owl-carousel .owl-stage-outer {
-    max-height: 42rem;
-}
 
-.owl-theme .owl-nav {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    top: 19rem;
-    right: 0;
-    margin: 0;
-}
-
-.carousel-name {
-    position: absolute;
-    width: 25rem;
-    background-color: #FFFFFF;
-    padding: 2rem 2.5rem;
-    top: 25.5rem;
-    right: 2.9rem;
-    .carousel__title h4 {
-        font-size: calc($font-h - 1.2rem);
-    }
-    .carousel__subtitle p {
-        color: #000000;
-        margin-top: 1rem;
-    }
-}
 
 // catalog
 
@@ -198,7 +198,136 @@ p {
         align-items: center;
         h4 {
             color: #FFFFFF;
-            font-size: calc($font-h - 1.2rem)
+            line-height: normal;
         }
     }
+}
+
+// rentEquipment
+.rentEquipment {
+    .wrapper-title {
+        width: 48rem;
+    }
+}
+
+.rent {
+    &__wrapper {
+        @extend %wrapper;
+        align-items: center;
+    }
+    &__content-wrapper {
+        padding: 3.2rem 3rem;
+    }
+    &__discription  {
+        width: 35rem;
+        p {
+            font-size: calc($font-p + .4rem);
+        }
+    }
+    &__carousel-wrapper {
+        border: .3rem solid $base-color;
+        width: 66.5rem;
+    }
+    &__title {
+        position: relative;
+        margin-bottom: 3rem;
+    }
+    &__carousel-img {
+        width: 25.5rem;
+    }
+    &__carousel-title {
+        margin-bottom: 3rem; 
+        h5 {
+            font-size: calc($font-h - 1.4rem);
+        }
+    }
+    &__content-pros {
+        margin-left: 2.5rem;
+        width: 26rem;
+        li {
+            margin-bottom: 2rem;
+        }
+    }
+    
+
+    .owl-nav {
+        position: absolute;
+        top: -8.2rem;
+        right: 0;
+        margin-top: 0;
+    }
+    .owl-item {
+        @extend %wrapper;
+    }
+}
+
+// news
+
+.news {
+    .wrapper {
+        @extend %wrapper;
+        align-items: baseline;
+    }
+    .wrapper-title {
+        width: 26rem;
+    }
+    &__btn {
+        background-color: $base-color;
+        padding: 1.5rem 3.4rem;
+        transition: all 1s;
+        &:hover {
+            background-color: #195396;
+        }
+        a p {
+            font-weight: 600;
+            letter-spacing: .1rem;
+            font-size: calc($font-p + .2rem);
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+    }
+
+
+    &__content-wrapper {
+        margin-bottom: 12rem
+    }
+
+    &__space, &__api.first , &__wrapper-date {
+        @extend %wrapper;
+    }
+    &__api.first {
+        width: 54rem;
+        .subtitle {
+            margin: 4rem 0 2rem;
+        }
+        .see-more a {
+            text-decoration: underline;
+            color: #343434;
+            p {
+                color: #000000;
+            }
+        }
+    }
+    &__api {
+        width: 22.5rem;
+        .title h4 {
+            line-height: normal;
+        }
+        .subtitle {
+            margin: 1.9rem 0;
+        }
+    }
+    &__wrapper-date {
+        align-items: end;
+    }
+    
+    &__content {
+        .news__wrapper-date {
+            align-items: center;
+        }
+        .subtitle {
+            width: 25.5rem;
+        }
+    }
+    
 }

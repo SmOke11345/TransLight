@@ -1,3 +1,8 @@
+.news__space, .news__api.first, .news__wrapper-date, .news .wrapper, .rent .owl-item, .rent__wrapper, .catalog__selector-name, .header .container .nav__links, .header .container .nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +31,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 3rem;
 }
 
+h4 {
+  font-size: 1.8rem;
+  line-height: 2.6em;
+}
+
 a {
   color: #ffffff;
   text-decoration: none;
@@ -35,7 +45,7 @@ img {
   width: 100%;
 }
 
-.catalog__selector-name, .header .container .nav__links, .header .container .nav {
+.news__space, .news__api.first, .news__wrapper-date, .news .wrapper, .rent .owl-item, .rent__wrapper, .catalog__selector-name, .header .container .nav__links, .header .container .nav {
   display: flex;
   justify-content: space-between;
 }
@@ -43,6 +53,11 @@ img {
 p {
   font-size: 1.4rem;
   line-height: normal;
+  color: #343434;
+}
+
+li::marker {
+  color: #343434;
 }
 
 .container {
@@ -50,13 +65,8 @@ p {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 992px) {
-  .container {
-    width: 96rem;
-  }
-}
 .wrapper__background {
-  background: url(/assets/img/background--hero.png) no-repeat;
+  background: url(../img/background--hero.png) no-repeat;
   min-height: 80rem;
   background-size: contain;
 }
@@ -78,6 +88,7 @@ p {
 }
 .header .container .nav__links p {
   font-weight: 600;
+  color: #ffffff;
 }
 
 .hero .container {
@@ -103,6 +114,7 @@ p {
   width: 40rem;
 }
 .hero__subtitle p {
+  color: #ffffff;
   font-size: 1.6rem;
 }
 .hero__btn {
@@ -112,6 +124,7 @@ p {
 .hero__btn p {
   font-size: 1.6rem;
   font-weight: 600;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   padding: 0.9rem 3.6rem;
@@ -127,7 +140,7 @@ p {
 }
 
 .wrapper-title {
-  padding: 15rem 0 7rem;
+  padding: 15rem 0 2rem;
   width: 36rem;
   text-align: end;
   position: relative;
@@ -135,16 +148,35 @@ p {
 .wrapper-title h2 {
   line-height: 4.4em;
   letter-spacing: 0.1em;
-  background: url(/assets/img/heading--title.png) no-repeat left;
+  background: url(../img/heading--title.png) no-repeat left;
   background-size: 10rem;
 }
 
-.owl-item {
+.our__projects .owl-item {
   position: relative;
   width: 54rem;
 }
-.owl-item.active {
+.our__projects .owl-item.active {
   margin-right: 3rem;
+}
+.our__projects .owl-carousel .owl-stage-outer {
+  max-height: 42rem;
+}
+.our__projects .owl-theme .owl-nav {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 19rem;
+  right: 0;
+  margin: 0;
+}
+.our__projects .carousel-name {
+  position: absolute;
+  width: 25rem;
+  background-color: #FFFFFF;
+  padding: 2rem 2.5rem;
+  top: 25.5rem;
+  right: 2.9rem;
 }
 
 .owl-prev, .owl-next {
@@ -153,35 +185,6 @@ p {
 
 .owl-theme .owl-nav [class*=owl-] {
   margin: 0.1rem;
-}
-
-.owl-carousel .owl-stage-outer {
-  max-height: 42rem;
-}
-
-.owl-theme .owl-nav {
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  top: 19rem;
-  right: 0;
-  margin: 0;
-}
-
-.carousel-name {
-  position: absolute;
-  width: 25rem;
-  background-color: #FFFFFF;
-  padding: 2rem 2.5rem;
-  top: 25.5rem;
-  right: 2.9rem;
-}
-.carousel-name .carousel__title h4 {
-  font-size: 1.8rem;
-}
-.carousel-name .carousel__subtitle p {
-  color: #000000;
-  margin-top: 1rem;
 }
 
 .catalog .wrapper-title {
@@ -225,7 +228,109 @@ p {
 }
 .catalog__title h4 {
   color: #FFFFFF;
+  line-height: normal;
+}
+
+.rentEquipment .wrapper-title {
+  width: 48rem;
+}
+
+.rent__wrapper {
+  align-items: center;
+}
+.rent__content-wrapper {
+  padding: 3.2rem 3rem;
+}
+.rent__discription {
+  width: 35rem;
+}
+.rent__discription p {
   font-size: 1.8rem;
+}
+.rent__carousel-wrapper {
+  border: 0.3rem solid #005BC1;
+  width: 66.5rem;
+}
+.rent__title {
+  position: relative;
+  margin-bottom: 3rem;
+}
+.rent__carousel-img {
+  width: 25.5rem;
+}
+.rent__carousel-title {
+  margin-bottom: 3rem;
+}
+.rent__carousel-title h5 {
+  font-size: 1.6rem;
+}
+.rent__content-pros {
+  margin-left: 2.5rem;
+  width: 26rem;
+}
+.rent__content-pros li {
+  margin-bottom: 2rem;
+}
+.rent .owl-nav {
+  position: absolute;
+  top: -8.2rem;
+  right: 0;
+  margin-top: 0;
+}
+.news .wrapper {
+  align-items: baseline;
+}
+.news .wrapper-title {
+  width: 26rem;
+}
+.news__btn {
+  background-color: #005BC1;
+  padding: 1.5rem 3.4rem;
+  transition: all 1s;
+}
+.news__btn:hover {
+  background-color: #195396;
+}
+.news__btn a p {
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.news__content-wrapper {
+  margin-bottom: 12rem;
+}
+.news__api.first {
+  width: 54rem;
+}
+.news__api.first .subtitle {
+  margin: 4rem 0 2rem;
+}
+.news__api.first .see-more a {
+  text-decoration: underline;
+  color: #343434;
+}
+.news__api.first .see-more a p {
+  color: #000000;
+}
+.news__api {
+  width: 22.5rem;
+}
+.news__api .title h4 {
+  line-height: normal;
+}
+.news__api .subtitle {
+  margin: 1.9rem 0;
+}
+.news__wrapper-date {
+  align-items: end;
+}
+.news__content .news__wrapper-date {
+  align-items: center;
+}
+.news__content .subtitle {
+  width: 25.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

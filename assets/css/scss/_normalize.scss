@@ -9,6 +9,79 @@ html {
     font-size: 0.521vw; // при вычисление в rem, 1 rem = 10px на ширине экрана 1920px
     font-weight: 300;
 }
+@media (max-width: 108em) {
+    html {
+        font-size: 9px;
+    }
+}
+@media (max-width: 105em) {
+    html {
+        font-size: 8.75px;
+    }
+}
+@media (max-width: 91.5em) {
+    html {
+        font-size: 7.9px;
+    }
+}
+@media (max-width: 91em) {
+    html {
+        font-size: 8.4px;
+    }
+}
+@media (max-width: 90em) {
+    html {
+        font-size: 7.9px;
+    }
+}
+@media (max-width: 80em) {
+    html {
+        font-size: 7.2px;
+    }
+}
+@media (max-width: 72em) {
+    html {
+        font-size: 6.5px;
+    }
+}
+@media (max-width: 64em) {
+    html {
+        font-size: 5.5px;
+    }
+}
+
+@media (max-width: 48em) {
+    html {
+        font-size: 10px;
+        -webkit-text-size-adjust: none;
+    }
+}
+@media (max-width: 44em) {
+    html {
+        font-size: 9px;
+    }
+}
+@media (max-width: 38em) {
+    html {
+        font-size: 8x;
+    }
+}
+@media (max-width: 34em) {
+    html {
+        font-size: 7px;
+    }
+}
+@media (max-width: 30em) {
+    html {
+        font-size: 6px;
+    }
+}
+@media (max-width: 26em) {
+    html {
+        font-size: 4.5px;
+    }
+}
+
 
 body {
     background-color: #E5E5E5;

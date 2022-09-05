@@ -308,6 +308,9 @@ li::marker {
             }
         }
     }
+    &__img {
+        width: 25.5rem;
+    }
     &__api {
         width: 22.5rem;
         .title h4 {
@@ -319,6 +322,9 @@ li::marker {
     }
     &__wrapper-date {
         align-items: end;
+        .img {
+            width: 12.8rem;
+        }
     }
     
     &__content {
@@ -328,6 +334,46 @@ li::marker {
         .subtitle {
             width: 25.5rem;
         }
-    }
-    
+    }    
 }
+
+.footer {
+    background-color: $base-color;
+    &__wrapper {
+        padding: 1.1rem 0 0; 
+    }
+    &__content-wrapper {
+       @extend %wrapper;
+       align-items: center; 
+       padding: 2.5rem 0;
+       border-bottom: .1rem solid #ffffff;
+    }
+    &__content-wrapper:last-child {
+        border-bottom: none;
+    }
+    &__grid {
+        display: grid;
+        row-gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        .footer__about {
+            width: 20rem;
+        }
+    }
+    &__tel h4 {
+        color: #ffffff;
+        letter-spacing: .1em;
+    }
+    &__address , &__email {
+        p {
+            font-weight: 600;
+            color: #ffffff;
+        }
+    }
+    &__about {
+        p {
+            color: #ffffff;
+            opacity: 0.8;
+        }
+    }
+}
+

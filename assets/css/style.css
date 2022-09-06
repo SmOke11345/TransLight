@@ -20,31 +20,6 @@ html {
     -webkit-text-size-adjust: none;
   }
 }
-@media (max-width: 44em) {
-     html {
-         font-size: 9px;
-     } 
- }
- @media (max-width: 38em) {
-     html {
-         font-size: 8x;
-     }
-}
- @media (max-width: 34em) {
-    html {
-         font-size: 7px;
-     }
- }
- @media (max-width: 30em) {
-    html {
-         font-size: 6px;
-     }
- }
- @media (max-width: 26em) {
-     html {
-        font-size: 4.5px;
-    }
- }
 body {
   background-color: #E5E5E5;
   color: #ffffff;

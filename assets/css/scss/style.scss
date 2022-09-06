@@ -16,14 +16,25 @@ li::marker {
     width: 114rem;
     margin: 0 auto;
 }
+@media screen and (max-width: 48em) {
+    .container {
+        width: 95%;
+    }
+}
 
 
 // wrapper / header 
 
-.wrapper__background {
+.wrapper-background {
     background: url(../img/background--hero.png) no-repeat;
     min-height: 80rem;
     background-size: contain;
+}
+@media screen and (max-width: 48em) {
+    .wrapper-background{
+        background-size: auto;
+        min-height: 70rem;
+    }
 }
 
 .header {
@@ -46,13 +57,69 @@ li::marker {
                     color: #ffffff;
                 }
             }
+            @media screen and (max-width: 48em) {
+                &__links{
+                    display: none;
+                }
+                .logo {
+                    width: 10rem;
+                }
+            }
+        }
+        @media screen and (max-width: 48em) {
+            .nav{
+                padding: 1rem 1rem;
+            }
         }
     }
 }
 
+.menu {
+    display: none;
+}
+.menu-inner {
+    display: none;
+    position: fixed;
+    background-color: #343434;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+        
+}
+.close {
+    width: 4rem;
+    top: 2%;
+    right: 5%;
+    position: absolute;
+}
+.media-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50%;
+    a p {
+        color: #ffffff;
+        margin-top: 2rem;
+        font-size: calc($font-p + 1rem);
+    }
+}
+@media screen and (max-width: 48em) {
+    .menu {
+        display: block;
+    }
+}
+
+
 .hero {
     .container {
         width: 61rem;
+    }
+    @media screen and (max-width: 48em) {
+        .container{
+            width: 95%;
+        }
     }
     &__background {
         width: 44rem;
@@ -62,6 +129,11 @@ li::marker {
         top: 9rem;
         left: 45.5rem;
     }
+    @media screen and (max-width: 48em) {
+        &__background {
+            display: none;
+        }
+    }
     &__title  {
         margin-top: 20.2rem;
         h1 {
@@ -70,11 +142,24 @@ li::marker {
             color: #FFFFFF;
         }
     }
+    @media screen and (max-width: 48em) {
+        &__title {
+            margin-top: 10.2rem;
+            h1 {
+                font-size: calc($font-h + 1.6rem);
+            }
+        }
+    }
     &__subtitle {
         width: 40rem;
         p {
             color: #ffffff;
             font-size: calc($font-p + .2rem);
+        }
+    }
+    @media screen and (max-width: 48em) {
+        &__subtitle {
+            width: auto;
         }
     }
     &__btn {
@@ -88,6 +173,12 @@ li::marker {
             letter-spacing: .1em;
             padding: .9rem 3.6rem;
             border: .2rem solid #FFFFFF;
+        }
+    }
+    @media screen and (max-width: 48em) {
+        &__btn {
+            width: auto;
+            text-align: center;
         }
     }
 }
@@ -110,9 +201,20 @@ li::marker {
         background-size: 10rem;
     }
 }
+@media screen and (max-width: 48em) {
+    .wrapper-title {
+        padding-top: 7rem;
+        width: auto;
+        h2 {
+            text-align: center;
+            font-size: calc($font-h - .2rem);
+            background: none;
+        }
+    }
+}
 
 // our-projects
-.our__projects {
+.our-projects {
     .owl-item {
         position: relative;
         width: 54rem;
@@ -124,6 +226,11 @@ li::marker {
     .owl-carousel .owl-stage-outer {
         max-height: 42rem;
     }
+    @media screen and (max-width: 48em) {
+        .owl-carousel .owl-stage-outer {
+            max-height: 32rem;
+        }
+    }
     
     .owl-theme .owl-nav {
         display: flex;
@@ -133,6 +240,11 @@ li::marker {
         right: 0;
         margin: 0;
     }
+    @media screen and (max-width: 48em) {
+        .owl-theme .owl-nav{
+            display: none;;
+        }
+    }
     
     .carousel-name {
         position: absolute;
@@ -141,6 +253,13 @@ li::marker {
         padding: 2rem 2.5rem;
         top: 25.5rem;
         right: 2.9rem;
+    }
+    @media screen and (max-width: 48em) {
+        .carousel-name {
+            top: 19.5rem;
+            right: auto;
+            width: auto;
+        }
     }
 }
 .owl-prev , .owl-next {
@@ -156,6 +275,11 @@ li::marker {
 .catalog {
     .wrapper-title {
         width: 44rem;
+    }
+    @media screen and (max-width: 48em) {
+        .wrapper-title {
+            width: auto;
+        }
     }
     &__selector-name {
         @extend %wrapper;
@@ -180,6 +304,11 @@ li::marker {
         gap: 3rem;
         margin-top: 5rem;
     }
+    @media screen and (max-width: 48em) {
+        &__production  {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
     &__item {
         position: relative;
     }
@@ -191,6 +320,11 @@ li::marker {
         height: 8.6rem;
         top: 20rem;
         right: 0;
+    }
+    @media screen and (max-width: 48em) {
+        &__title-item  {
+            top: 15rem;
+        }
     }
     &__title {
         padding: 1.7rem 3.5rem;
@@ -209,6 +343,14 @@ li::marker {
     .wrapper-title {
         width: 48rem;
     }
+    @media screen and (max-width: 48em) {
+        .wrapper-title {
+            width: auto;
+            h2 {
+                line-height: normal;
+            }
+        }
+    }
 }
 
 .rent {
@@ -219,15 +361,30 @@ li::marker {
     &__content-wrapper {
         padding: 3.2rem 3rem;
     }
+    @media screen and (max-width: 48em) {
+        &__content-wrapper {
+            padding: 1.2rem 2rem;
+        }
+    }
     &__discription  {
         width: 35rem;
         p {
             font-size: calc($font-p + .4rem);
         }
     }
+    @media screen and (max-width: 48em) {
+        &__discription {
+            display: none;
+        }
+    }
     &__carousel-wrapper {
         border: .3rem solid $base-color;
         width: 66.5rem;
+    }
+    @media screen and (max-width: 48em) {
+        &__carousel-wrapper{
+            width:-webkit-fill-available;
+        }
     }
     &__title {
         position: relative;
@@ -249,6 +406,11 @@ li::marker {
             margin-bottom: 2rem;
         }
     }
+    @media screen and (max-width: 48em) {
+        &__content-pros{
+            width: auto;
+        }
+    }
     
 
     .owl-nav {
@@ -259,6 +421,15 @@ li::marker {
     }
     .owl-item {
         @extend %wrapper;
+    }
+    @media screen and (max-width: 48em) {
+        .owl-nav {
+            display: none;
+        }
+        .owl-item  {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
 
@@ -272,6 +443,15 @@ li::marker {
     .wrapper-title {
         width: 26rem;
     }
+    @media screen and (max-width: 48em) {
+        .wrapper {
+            flex-direction: column;
+        }
+        .wrapper-title {
+            width: 100%;
+        }
+    }
+    
     &__btn {
         background-color: $base-color;
         padding: 1.5rem 3.4rem;
@@ -287,7 +467,14 @@ li::marker {
             text-transform: uppercase;
         }
     }
-
+    @media screen and (max-width: 48em) {
+        &__btn {
+            width: 100%;
+            a p {
+                text-align: center;
+            }
+        }
+    }
 
     &__content-wrapper {
         margin-bottom: 12rem
@@ -299,7 +486,7 @@ li::marker {
     &__api.first {
         width: 54rem;
         .subtitle {
-            margin: 4rem 0 2rem;
+            margin: 3rem 0 2rem;
         }
         .see-more a {
             text-decoration: underline;
@@ -312,15 +499,36 @@ li::marker {
     &__img {
         width: 25.5rem;
     }
+    @media screen and (max-width: 48em) {
+        &__api, &__space {
+           flex-direction: column;
+           margin-top: 3rem;
+        }
+        &__api.first {
+            width: auto;
+        }
+        &__img {
+            width: 30.5rem;
+        }
+   }
     &__api {
         width: 22.5rem;
         .title h4 {
             line-height: normal;
         }
+        .title.media {
+            width: 2rem;
+        }
+        @media screen and (max-width: 48em) {
+            .title.media {
+                width: auto;
+            }
+        }
         .subtitle {
             margin: 1.9rem 0;
         }
     }
+    
     &__wrapper-date {
         align-items: end;
         .img {
@@ -335,7 +543,17 @@ li::marker {
         .subtitle {
             width: 25.5rem;
         }
-    }    
+        @media screen and (max-width: 48em) {
+            .subtitle {
+                width: auto;
+            }
+       }
+    }
+    @media screen and (max-width: 48em) {
+        &__content {
+            margin-top: 1rem;
+        }
+   }    
 }
 
 .footer {
@@ -349,6 +567,13 @@ li::marker {
        padding: 2.5rem 0;
        border-bottom: .1rem solid #ffffff;
     }
+    @media screen and (max-width: 48em) {
+        &__content-wrapper {
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 1rem;
+        }
+   }
     &__content-wrapper:last-child {
         border-bottom: none;
     }
@@ -359,6 +584,11 @@ li::marker {
         .footer__about {
             width: 20rem;
         }
+        @media screen and (max-width: 48em) {
+            .footer__about {
+                width: auto;
+            }
+       }
     }
     &__tel h4 {
         color: #ffffff;

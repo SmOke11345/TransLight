@@ -78,7 +78,7 @@ li::marker {
   }
 }
 .wrapper-background {
-  background: url(../img/background--hero.png) no-repeat;
+  background: url(../img/hero--background.svg) no-repeat;
   min-height: 80rem;
   background-size: contain;
 }

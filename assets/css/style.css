@@ -143,6 +143,16 @@ li::marker {
   position: absolute;
 }
 
+.menu-inner.scale-out-tr {
+  -webkit-animation: scale-out-tr 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) reverse both;
+  animation: scale-out-tr 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) reverse both;
+}
+
+.menu-inner.scale-in-tr {
+  -webkit-animation: scale-out-tr 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-tr 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
 .media-links {
   display: flex;
   flex-direction: column;
@@ -154,6 +164,11 @@ li::marker {
   color: #ffffff;
   margin-top: 2rem;
   font-size: 2.4rem;
+}
+
+.media-links.focus-in-contract {
+  -webkit-animation: focus-in-contract 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1000ms backwards;
+  animation: focus-in-contract 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1000ms backwards;
 }
 
 @media screen and (max-width: 48em) {
@@ -188,7 +203,11 @@ li::marker {
 .hero__title h1 {
   font-size: 4.8rem;
   text-transform: none;
-  color: #FFFFFF;
+  color: #ffffff;
+}
+.hero__title.focus-in-expand, .hero__subtitle.focus-in-expand {
+  -webkit-animation: focus-in-expand 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: focus-in-expand 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 @media screen and (max-width: 48em) {
   .hero__title {
@@ -221,7 +240,7 @@ li::marker {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   padding: 0.9rem 3.6rem;
-  border: 0.2rem solid #FFFFFF;
+  border: 0.2rem solid #ffffff;
 }
 @media screen and (max-width: 48em) {
   .hero__btn {
@@ -230,11 +249,14 @@ li::marker {
   }
 }
 
-.hero__subtitle, .hero__btn {
+.hero__subtitle,
+.hero__btn {
   margin-top: 3rem;
 }
 
-.hero__subtitle, .hero__btn, .hero__title {
+.hero__subtitle,
+.hero__btn,
+.hero__title {
   position: relative;
 }
 
@@ -293,7 +315,7 @@ li::marker {
 .our-projects .carousel-name {
   position: absolute;
   width: 25rem;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 2rem 2.5rem;
   top: 25.5rem;
   right: 2.9rem;
@@ -306,7 +328,8 @@ li::marker {
   }
 }
 
-.owl-prev, .owl-next {
+.owl-prev,
+.owl-next {
   width: 5.5rem;
 }
 
@@ -369,7 +392,7 @@ li::marker {
   align-items: center;
 }
 .catalog__title h4 {
-  color: #FFFFFF;
+  color: #ffffff;
   line-height: normal;
 }
 
@@ -610,6 +633,123 @@ li::marker {
 .footer__about p {
   color: #ffffff;
   opacity: 0.8;
+}
+
+@-webkit-keyframes scale-out-tr {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-out-tr {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes scale-in-tr {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-tr {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

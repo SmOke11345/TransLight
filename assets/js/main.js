@@ -29,12 +29,19 @@ $(document).ready(function(){
 
 const close = document.querySelector('.close'),
       open = document.querySelector('.menu'),
-      overFlow = document.querySelector('.menu-inner');
+      overFlow = document.querySelector('.menu-inner'),
+      textInner = document.querySelector('.media-links');
 
 open.addEventListener('click', () => {
-    overFlow.style.display = 'block'
+    overFlow.style.display = 'block';
+    overFlow.classList.add('scale-out-tr');
+    textInner.classList.add('focus-in-contract');
 })
 
 close.addEventListener('click', () => {
-    overFlow.style.display = 'none'
+    if (overFlow.classList.contains('scale-out-tr')) {
+        overFlow.style.display = 'none';
+        overFlow.classList.remove('scale-out-tr');
+    }
 })
+

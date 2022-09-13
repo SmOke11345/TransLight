@@ -1,13 +1,13 @@
 // carousel
-$(document).ready(function(){
+$(document).ready(function () {
     $(".owl-carousel-projects").owlCarousel({
         loop: true,
         items: 1,
         nav: false,
-        navText: ["<img src='./assets/img/slider-menu__button.png'>","<img src='./assets/img/slider-menu__button1.png'>"],
+        navText: ["<img src='./assets/img/slider-menu__button.png'>", "<img src='./assets/img/slider-menu__button1.png'>"],
         dots: false,
-        responsiveClass:true,
-        responsive:{
+        responsiveClass: true,
+        responsive: {
             0: {
                 items: 1,
             },
@@ -21,16 +21,16 @@ $(document).ready(function(){
         loop: true,
         items: 1,
         nav: true,
-        navText: ["<img src='./assets/img/slider-menu__button.png'>","<img src='./assets/img/slider-menu__button1.png'>"],
+        navText: ["<img src='./assets/img/slider-menu__button.png'>", "<img src='./assets/img/slider-menu__button1.png'>"],
     });
 });
 
 // burger/menu
 
 const close = document.querySelector('.close'),
-      open = document.querySelector('.menu'),
-      overFlow = document.querySelector('.menu-inner'),
-      textInner = document.querySelector('.media-links');
+    open = document.querySelector('.menu'),
+    overFlow = document.querySelector('.menu-inner'),
+    textInner = document.querySelector('.media-links');
 
 open.addEventListener('click', () => {
     overFlow.style.display = 'block';
@@ -40,8 +40,8 @@ open.addEventListener('click', () => {
 
 close.addEventListener('click', () => {
     if (overFlow.classList.contains('scale-out-tr')) {
-        overFlow.style.display = 'none';
         overFlow.classList.remove('scale-out-tr');
+        overFlow.style.display = 'none';
     }
 })
 
